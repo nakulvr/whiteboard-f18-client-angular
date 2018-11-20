@@ -10,7 +10,8 @@ import {UserService} from '../services/user.service.client';
 export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private userService: UserService) { }
-
+  username = '';
+  password = '';
   ngOnInit() {
   }
   login(username: string, password: string) {
