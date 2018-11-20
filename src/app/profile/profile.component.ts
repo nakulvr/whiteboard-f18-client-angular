@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private userService: UserService) { }
 
-  user = {};
+  user = {username: 'default', password: 'default'};
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       params => this.user = this.userService.findUserById(params.userId)
