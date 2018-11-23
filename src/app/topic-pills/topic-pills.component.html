@@ -1,0 +1,10 @@
+<div class="container-fluid mt-2 mb-5">
+  <h4>
+    <span
+      [ngClass]="{'badge-primary' : topic.id == topicId,
+      'badge-secondary' : topic.id != topicId}"
+      routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/topic/{{topic.id}}"
+      *ngFor="let topic of topics" class="badge">{{topic.title}}</span>
+  </h4>
+  <app-widget-list></app-widget-list>
+</div>

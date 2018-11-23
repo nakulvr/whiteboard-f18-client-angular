@@ -1,0 +1,42 @@
+<div *ngFor="let widget of widgets">
+  <div [ngSwitch]="widget.type">
+    <div *ngSwitchCase="'HEADING'" class="mt-3 mb-3">
+      <div [ngSwitch]="widget.size">
+        <h1 *ngSwitchCase="'1'">{{widget.text}}</h1>
+        <h2 *ngSwitchCase="'2'">{{widget.text}}</h2>
+        <h3 *ngSwitchCase="'3'">{{widget.text}}</h3>
+        <h4 *ngSwitchCase="'4'">{{widget.text}}</h4>
+        <h5 *ngSwitchCase="'5'">{{widget.text}}</h5>
+      </div>
+    </div>
+    <div *ngSwitchCase="'LINK'" class="mt-3 mb-3">
+      <a href="{{widget.href}}">{{widget.href}}</a>
+    </div>
+    <div *ngSwitchCase="'PARAGRAPH'" class="mt-3 mb-3">
+      <p>
+        {{widget.text}}
+      </p>
+    </div>
+    <div *ngSwitchCase="'IMAGE'" class="mt-3 mb-3">
+      <img src="{{widget.src}}" alt=""/>
+    </div>
+    <div *ngSwitchCase="'LIST'" class="mt-3 mb-3">
+      <div [ngSwitch]="widget.ordered">
+        <div *ngSwitchCase="true">
+          <ol>
+            <li *ngFor="let list of splitString(widget.items)">
+            {{list}}
+            </li>
+          </ol>
+        </div>
+        <div *ngSwitchCase="false">
+          <ul>
+            <li *ngFor="let list of splitString(widget.items)">
+              {{list}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
