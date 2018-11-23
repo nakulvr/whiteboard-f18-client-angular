@@ -5,4 +5,8 @@ export class LessonServiceClient {
     return fetch(this.WHITEBOARD_URL + '/api/user/7/course/' + courseId + '/module/' + moduleId + '/lesson')
       .then(response => response.json());
   }
+  findLessonById(courseId, moduleId, lessonId) {
+    return fetch(this.WHITEBOARD_URL + '/api/user/7/course/' + courseId + '/module/' + moduleId + '/lesson/' + lessonId)
+      .then(response => response.json());
+  }
 }

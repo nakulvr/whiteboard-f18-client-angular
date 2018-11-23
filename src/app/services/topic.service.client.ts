@@ -6,4 +6,9 @@ export class TopicServiceClient {
       + moduleId + '/lesson/' + lessonId + '/topic')
       .then(response => response.json());
   }
+  findTopicById(courseId, moduleId, lessonId, topicId) {
+    return fetch(this.WHITEBOARD_URL + '/api/user/7/course/' + courseId + '/module/'
+      + moduleId + '/lesson/' + lessonId + '/topic/' + topicId)
+      .then(response => response.json());
+  }
 }

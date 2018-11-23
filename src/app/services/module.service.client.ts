@@ -5,4 +5,8 @@ export class ModuleServiceClient {
     return fetch(this.MODULE_URL + '/api/user/7/course/' + courseId + '/module')
       .then(response => response.json());
   }
+  findModuleById(courseId, moduleId) {
+    return fetch(this.MODULE_URL + '/api/user/7/course/' + courseId + '/module/' + moduleId)
+      .then(response => response.json());
+  }
 }

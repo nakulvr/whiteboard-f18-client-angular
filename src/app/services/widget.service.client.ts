@@ -5,4 +5,8 @@ export class WidgetServiceClient {
     return fetch(this.WHITEBOARD_URL + '/api/topic/' + topicId + '/widget')
       .then(response => response.json());
   }
+  findWidgetsById(topicId, widgetId) {
+    return fetch(this.WHITEBOARD_URL + '/api/topic/' + topicId + '/widget/' + widgetId)
+      .then(response => response.json());
+  }
 }

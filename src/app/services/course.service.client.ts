@@ -12,10 +12,5 @@ export class CourseServiceClient {
     return fetch(this.COURSE_API_URL + '/api/user/7/course/' + courseId)
       .then(response => response.json());
   }
-  createCourse(course) {
 
-  }
-  deleteCourse(courseId) {
-
-  }
 }
