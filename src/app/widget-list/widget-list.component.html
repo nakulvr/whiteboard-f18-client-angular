@@ -24,14 +24,14 @@
       <div [ngSwitch]="widget.ordered">
         <div *ngSwitchCase="true">
           <ol>
-            <li *ngFor="let list of splitString(widget.items)">
+            <li *ngFor="let list of widget.items.split(',')">
             {{list}}
             </li>
           </ol>
         </div>
         <div *ngSwitchCase="false">
           <ul>
-            <li *ngFor="let list of splitString(widget.items)">
+            <li *ngFor="let list of widget.items.split(',')">
               {{list}}
             </li>
           </ul>

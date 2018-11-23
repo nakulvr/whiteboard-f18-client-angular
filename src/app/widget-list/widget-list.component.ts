@@ -25,9 +25,7 @@ export class WidgetListComponent implements OnInit {
     this.widgetService.findWidgetsForTopic(topicId)
       .then(widgets => this.widgets = widgets);
   }
-  splitString(string: String) {
-    return string.split(',');
-  }
+
   ngOnInit() {
   }
 
