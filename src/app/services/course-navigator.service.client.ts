@@ -1,5 +1,6 @@
 export class CourseNavigatorServiceClient {
-COURSE_API_URL = 'http://localhost:8080';
+// COURSE_API_URL = 'http://localhost:8080';
+COURSE_API_URL = 'https://whiteboard-nakul-server-java.herokuapp.com/';
   findAllCourses() {
     return fetch(this.COURSE_API_URL + '/api/user/7/course/')
       .then(response => response.json());
